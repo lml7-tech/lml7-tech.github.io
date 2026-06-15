@@ -16,8 +16,6 @@ body {
 h1{
   text-align: center;
   color:#802d72;
-
- 
   }
  
 }
@@ -55,7 +53,7 @@ button:hover{
 }
 
   footer {
-    background-color: #;
+    background-color: #8a3469;
     color: white;
     text-align: center;
     padding: 20px;
