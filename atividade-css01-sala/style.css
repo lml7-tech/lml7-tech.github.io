@@ -17,9 +17,7 @@ h1{
   text-align: center;
   color:#802d72;
 
-  p{
-    text-aling: center;
-    color:#802d72;
+ 
   }
  
 }
@@ -56,11 +54,11 @@ button:hover{
   background-color: #c732ae
 }
 
-footer{
-  text-aling: center;
-  margin-top: 20px;
-  padding: 10px;
-  border-top: 1px solid #ccc;
+  footer {
+    background-color: #;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 1 px solid #ccc;
 }
-
 
