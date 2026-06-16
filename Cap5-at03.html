@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT03 — Formulário de Matrícula Acadêmica</title>
+</head>
+<body>
+
+    <h1>Solicitação de Matrícula</h1>
+    
+    <p><strong>* Campos obrigatórios</strong></p>
+
+    <form action="https://httpbin.org/post" method="post">
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            
+            <div>
+                <label for="txt-nome">Nome completo: *</label>
+                <input type="text" id="txt-nome" name="nome" required minlength="5" maxlength="100">
+            </div>
+            <br>
+
+            <div>
+                <label for="txt-cpf">CPF: *</label>
+                <input type="text" id="txt-cpf" name="cpf" required 
+                       pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                       placeholder="000.000.000-00" 
+                       title="CPF no formato 000.000.000-00">
+            </div>
+            <br>
+
+            <div>
+                <label for="txt-telefone">Telefone:</label>
+                <input type="tel" id="txt-telefone" name="telefone" 
+                       pattern="\(\d{2}\)\s\d{4,5}-\d{4}" 
+                       placeholder="(82) 99999-9999">
+            </div>
+            <br>
+
+            <div>
+                <label for="txt-email">E-mail: *</label>
+                <input type="email" id="txt-email" name="email" required>
+            </div>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Dados Acadêmicos</legend>
+            
+            <div>
+                <label for="sel-curso">Curso: *</label>
+                <select id="sel-curso" name="curso" required>
+                    <option value="">-- Selecione um curso --</option>
+                    
+                    <optgroup label="Computação">
+                        <option value="sistemas_de_informacao">Sistemas de Informação</option>
+                        <option value="ciencia_da_computacao">Ciência da Computação</option>
+                        <option value="engenharia_da_computacao">Engenharia da Computação</option>
+                    </optgroup>
+                    
+                    <optgroup label="Gestão">
+                        <option value="administracao">Administração</option>
+                        <option value="ciencias_contabeis">Ciências Contábeis</option>
+                    </optgroup>
+                </select>
+            </div>
+            <br>
+
+            <fieldset>
+                <legend>Período</legend>
+                <div>
+                    <input type="radio" id="rad-manha" name="periodo" value="manha">
+                    <label for="rad-manha">Manhã</label>
+                </div>
+                <div>
+                    <input type="radio" id="rad-tarde" name="periodo" value="tarde">
+                    <label for="rad-tarde">Tarde</label>
+                </div>
+                <div>
+                    <input type="radio" id="rad-noite" name="periodo" value="noite">
+                    <label for="rad-noite">Noite</label>
+                </div>
+            </fieldset>
+            <br>
+
+            <div>
+                <label for="num-ingresso">Ano de ingresso pretendido: *</label>
+                <input type="number" id="num-ingresso" name="ano_ingresso" min="2025" max="2030" required>
+            </div>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Áreas de Interesse</legend>
+            <p>Selecione suas áreas de interesse (pelo menos 5 opções disponíveis):</p>
+            
+            <div>
+                <input type="checkbox" id="chk-devweb" name="interesses[]" value="desenvolvimento_web">
+                <label for="chk-devweb">Desenvolvimento Web</label>
+            </div>
+            <div>
+                <input type="checkbox" id="chk-bd" name="interesses[]" value="banco_de_dados">
+                <label for="chk-bd">Banco de Dados</label>
+            </div>
+            <div>
+                <input type="checkbox" id="chk-ia" name="interesses[]" value="inteligencia_artificial">
+                <label for="chk-ia">Inteligência Artificial</label>
+            </div>
+            <div>
+                <input type="checkbox" id="chk-seg" name="interesses[]" value="seguranca_da_informacao">
+                <label for="chk-seg">Segurança da Informação</label>
+            </div>
+            <div>
+                <input type="checkbox" id="chk-infra" name="interesses[]" value="infraestrutura">
+                <label for="chk-infra">Infraestrutura</label>
+            </div>
+        </fieldset>
+        <br>
+
+        <div>
+            <button type="submit">Solicitar matrícula</button>
+            <button type="reset">Limpar formulário</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
