@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT02 — Cadastro de Usuário</title>
+</head>
+<body>
+
+    <h1>Cadastro de Usuário</h1>
+
+    <form action="https://httpbin.org/post" method="post">
+
+        <div>
+            <label for="txt-nome">Nome completo:</label>
+            <input type="text" id="txt-nome" name="nome" required minlength="3">
+        </div>
+        <br>
+
+        <div>
+            <label for="txt-email">E-mail:</label>
+            <input type="email" id="txt-email" name="email" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="txt-senha">Senha:</label>
+            <input type="password" id="txt-senha" name="senha" required minlength="8">
+        </div>
+        <br>
+
+        <div>
+            <label for="txt-nascimento">Data de nascimento:</label>
+            <input type="date" id="txt-nascimento" name="nascimento" required>
+        </div>
+        <br>
+
+        <fieldset>
+            <legend>Gênero</legend>
+            
+            <div>
+                <input type="radio" id="rad-masculino" name="genero" value="masculino">
+                <label for="rad-masculino">Masculino</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="rad-feminino" name="genero" value="feminino">
+                <label for="rad-feminino">Feminino</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="rad-outro" name="genero" value="outro">
+                <label for="rad-outro">Outro</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="rad-prefiro-nao-informar" name="genero" value="prefiro_nao_informar">
+                <label for="rad-prefiro-nao-informar">Prefiro não informar</label>
+            </div>
+        </fieldset>
+        <br>
+
+        <div>
+            <input type="checkbox" id="chk-aceite" name="text" value="sim" required>
+            <label for="chk-aceite">Aceito os termos de uso</label>
+        </div>
+        <br>
+
+        <div>
+            <button type="submit">Criar conta</button>
+            <button type="reset">Limpar campos</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
