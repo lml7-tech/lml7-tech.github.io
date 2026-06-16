@@ -17,7 +17,11 @@ h1{
   text-align: center;
   color:#802d72;
   }
- 
+
+p{
+  text-aling: center;
+  color: #802d72
+
 }
 label{
   display:block;
@@ -58,5 +62,7 @@ button:hover{
     text-align: center;
     padding: 20px;
     border-top: 1 px solid #ccc;
+    border-radius:30px;
+    border: 1px solid #c732ae;
 }
 
