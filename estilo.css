@@ -1,0 +1,107 @@
+/* ============================================================
+   TEMA 3 — EDITORIAL (claro, sério, com fonte serifada)
+   Para usar: salve este arquivo como estilo.css no seu projeto.
+   Você pode alterar CORES, FONTE e BORDAS aqui.
+   NÃO mexa na seção "LAYOUT (GRID)" — é o pedido de layout na atividade.
+   ============================================================= */
+
+/* ---- Cores e fonte (mude à vontade) ---- */
+: raiz {
+  --cor :  #e7f14e ;
+  --cor-escura :  #e0c02e ;
+  --texto :  #2b2b2b ;
+  --suave :  #7a6f66 ;
+  --fundo :  #f1f082 ;
+  --superfície :  #ffffff ;
+  --borda :  #e3d9cc ;
+  --raio :  6 px ;
+}
+
+corpo {
+  margem :  0 ;
+  família-da-fonte : Georgia ,  "Times New Roman" , serifada;
+  cor :  var ( --texto );
+  fundo :  var ( --fundo );
+  altura da linha :  1,65 ;
+}
+
+/* ============================================================
+   LAYOUT (GRID) — NÃO MUDE
+   ============================================================= */
+* { box-sizing : border-box; }
+
+. página {
+  exibição : grade;
+  grid-template-columns :  1 fr  300 px ;
+  grid-template-areas :
+    "cabecalho cabecalho"
+    "lateral principal"
+    "rodape rodape" ;
+  espaçamento :  24 px ;
+  largura máxima :  1000 px ;
+  margem :  0 auto;
+  preenchimento :  24 px ;
+}
+
+. cabecalho { área da grade : cabecalho; }
+.principal { área-grade : principal; }
+. lateral    { área-da-grade : lateral; }
+. rodape     { área-grade : rodape; }
+
+. projetos {
+  exibição : grade;
+  grid-template-columns :  repeat (auto-fit ,  minmax ( 200 px ,  1 fr ));
+  espaçamento :  16 px ;
+  margem superior :  14 px ;
+}
+
+@media ( max-width :  640 px ) {
+  . página {
+    grid-template-columns :  1 fr ;
+    grid-template-areas :
+      "cabecalho"
+      "principal"
+      "lateral"
+      "rodape" ;
+  }
+}
+/* ===================== fim do LAYOUT ===================== */
+
+/* ---- Aparência (mude à vontade) ---- */
+. cabecalho {
+  plano de fundo :  var ( -superficie );
+  cor :  var ( --texto );
+  preenchimento :  32 px ;
+  borda :  var sólida de 1 px ( --borda );
+  border-top :  var sólido de 4 px ( --cor );
+  raio-da-borda :  var ( --raio );
+}
+. cabecalho  h1 { margem :  0 ; tamanho da fonte :  braçadeira ( 1,7 rem ,  4 vw ,  2,6 rem ); cor :  var ( -cor-escura ); }
+. cabecalho  p { margem :  6 px  0  0 ; cor :  var ( -suave ); estilo da fonte : itálico; }
+.cabecalho nav { margin-top : 16 px ; display : flex; gap : 20 px ; flex-wrap : wrap; }   
+.cabecalho nav  a  { color :  var ( --cor ); text-decoration : none; font-weight : bold; border -bottom :  2 px solid transparent; }
+. cabecalho  nav  a : hover { border-bottom-color :  var ( -cor ); }
+
+. cartao {
+  plano de fundo :  var ( -superficie );
+  borda :  var sólida de 1 px ( --borda );
+  raio-da-borda :  var ( --raio );
+  preenchimento :  22 px ;
+}
+. cartao  + . cartao { margem-topo :  24 px ; }
+h2 { cor :  var ( -cor-escura ); margem superior :  0 ; border-bottom :  var sólido de 1 px ( --borda ); preenchimento inferior : 6 px ; } 
+
+. projeto {
+  fundo :  var ( --fundo );
+  borda :  var sólida de 1 px ( --borda );
+  raio-da-borda :  var ( --raio );
+  preenchimento :  16 px ;
+}
+. projeto  h3 { margem :  0  0  6 px ; cor :  var ( -cor ); }
+
+. habilidades { list-style : none; padding :  0 ; margin :  0 ; display : flex; flex-wrap : wrap; gap :  8 px ; }
+. habilidades  li { background : transparente; borda :  var sólida de 1 px ( --cor ); cor : var ( -cor-escura ); raio-da-borda : var ( --raio ); preenchimento : 4 px 12 px ; tamanho da fonte : 0,9 rem ; }     
+. contato { list-style : none; padding :  0 ; margin :  0 ; }
+. contato  li { margem :  10 px  0 ; }
+. contato  a { cor :  var ( --cor ); }
+. rodape { text-align : center; color :  var ( --suave ); padding :  8px ; font -size :  .9rem ; font-style : italic; }
