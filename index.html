@@ -1,91 +1,99 @@
-<html>
+<!DOCTYPE html >
+<!-- ===========================================================
+     TEMPLATE — Página pessoal com CSS Grid
+     Programação Web / Introdução às Tecnologias Web — IFAL
+     COMO USAR:
+     1) Copie ESTE index.html para o seu repositório (não mude a estrutura).
+     2) Escolha UM dos 3 temas de CSS (tema-1-indigo.css, tema-2-escuro.css
+        ou tema-3-editorial.css) e salve-o no seu projeto como estilo.css
+        (é o nome que este HTML carrega logo abaixo).
+     3) Troque os textos marcados com "TROQUE" pelo seu conteúdo.
+     IMPORTANTE: o LAYOUT é feito com CSS Grid e é o mesmo nos 3 temas.
+     Você escolhe a APARÊNCIA (fonte, cores, bordas), não o layout.
+     ============================================================ -->
+< html  lang =" pt-BR " >
 
-    
-    <head>
-    <title>Currículo de leoanda</title>
-    <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
-    </head>
+< cabeçalho >
+  < meta  charset =" UTF-8 " >
+  < meta  name =" viewport " content =" width=device-width, initial-scale=1.0 " >
+  < title > Página Pessoal — Seu Nome </ title >
+  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  < link  rel =" stylesheet " href =" estilo.css " >
+</head>​​
 
-    <body>
-        <header>
-      <h1>Leoanda Marcia De Lima</h1>
-      <p>sou estudante do instituto federal de alagoas (ifal) campus maceío, cursando desenvolvimento de sistema, atualmente 1° ano (2026). turma:911c </p>
-        </header>
-        
-        <main>
-    <div class="informações">
-      <img src="https://avatars.githubusercontent.com/u/267945944?s=400&u=95070121aa4224f7176f56f3e4b3523f46744a72&v=4"
-      width="250"     
-/>
-         <div class="descricao">
+< corpo >
+  < div  class =" pagina " >
 
-      <h3> data de nascimento:04/12/2010</h3>
-      <h3>Meu endereço</h3>
-             <p>Joaquim Gomes /AL. Rua:Dr. Carlos Gomes de Barros, casa - 70, Centro</p>
-      <h3>Descrição pessoal</h3>
-      <p>Olá, sou leoanda marcia de lima, sou iniciante em desenvolvimento de sistemas, meu objetivo é me especializar na área para fazer meus proprios sites, quero ter uma clínica médica e com esse curso consigo criar meu próprio site para marcar horarios em minha clínica. Meu objetivo é trabalhar para mim e não para outros. </p>
-         </div>
-    </div>    
-            
-      <h3>Hobbies</h3>
-            
-      <p>Alguns dos meus hobbies são: dançar e ler. Gosto de usar meu tempo para me divertir, amo assitir dorama, amo animais e gosto de ajudar pessoas. </p>
-      <h3>Conhecimentos na área do curso</h3>
-      <p>ainda estou iniciando na área mas, já vim obtendo conhecimemtos sobre:</p>
-      <ul>
-         <li>html,CSS</li> 
-         <li>Javascript</li>
-         <li>fundamentos da informatica</li>
-      <h3>Sobre meu curso</h3>
-      <p> O curso em Desenvolvimento de Sistema no IFAl (integrado ao ensino médio) forma profissionais para criar, testar e manter sistemas computacionais e banco de dados. Com duração de 3 anos, o foco é em programação,análise de dados e documentação,habilitando para trabalhar em emoresas de TI ou como autônomo.</p>
-      
-         <a href="https://www2.ifal.edu.br">descubra mais sobre a instituição Federal, Campus maceío</a>
-      </ul>
-<h2>Minhas Atividades</h2>
+    <!-- ====== CABEÇALHO — TROQUE pelo seu nome e sua frase ====== -->
+    < header  class =" cabecalho " >
+      < h1 > Leoanda Marcia de Lima </ h1 >
+      < p > Estudante de desenvolvimento de sistemas · IFAL </ p >
+      < nav >
+        < a  href =" #sobre " > Sobre </ a >
+        < a  href =" #projetos " > Projetos </ a >
+        < a  href =" #contato " > Contato </ a >
+      </ nav >
+    </ cabeçalho >
 
-    <ul>
-      <li>
-        <a href="atividade-css01-sala">
-          Atividade - Formulário com CSS.
-        </a>
-      </li>
-    </ul>
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    < classe principal  =" principal " >
+      < seção  id =" sobre " class =" cartão " >
+        <h2> sobre mim</h2>​​​
+        <!-- TROQUE por uma breve apresentação sua -->
+        < p > Meu nome é Leoanda, tenho 15 anos e sou estudante de uma escola federal. 
+        Atualmente, faço o ensino médio integrado ao curso técnico de Desenvolvimento de sistemas. 
+        Apensar de ser uma área nova para mim e de ás vezes eu ter dificuldade, gosto de aprender coisas novas 
+        e fico muito feliz quando consigo fazer algo funcionar. 
+           </ p >
 
-    <h3>Capítulo 4</h3>
+      </ seção >
 
-    <ul>
-      <li><a href="capitulo04-at1.html">Cap4. Atividade 1.</a></li>
-      <li><a href="capitulo04-at2.html">Cap4. Atividade 2.</a></li>
-      <li><a href="capitulo04-at3.html">Cap4. Atividade 3.</a></li>
-      <li><a href="capitulo04-at4.html">Cap4. Atividade 4.</a></li>
-    </ul>
+      < seção  id =" projetos " class =" cartão " >
+        < h2 > Projetos </ h2 >
+        <!-- Galeria com Grid: cada .projeto é um cartão; adicionar/remover à vontade -->
+        < div  class =" projetos " >
+          < artigo  class =" projeto " >
+            < h3 > Projeto 1 </ h3 >
+            < p > O que é e o que você fez. TROQUE por um projeto seu. </ p >
+          </ artigo >
+          < artigo  class =" projeto " >
+            < h3 > Projeto 2 </ h3 >
+            < p > Descrição curta do projeto. </ p >
+          </ artigo >
+          < artigo  class =" projeto " >
+            < h3 > Projeto 3 </ h3 >
+            < p > Descrição curta do projeto. </ p >
+          </ artigo >
+        </div>​​
+      </ seção >
+    </main>​​
 
-    <h3>Capítulo 5 — Formulários HTML</h3>
+    <!-- ====== BARRA LATERAL ====== -->
+    < aside  class =" lateral " >
+      < section  class =" cartao " >
+        < h2 > Habilidades </ h2 >
+        <!-- TROQUE pelas suas habilidades -->
+        < ul  class =" habilidades " >
+          <li> HTML </li>​​​​
+          <li> CSS </li>​​​​
+          <li> informática básica</li>
+        </ul>​​
+      </ seção >
 
-    <ul>
-      <li><a href="Cap5-at01.html">AT01 - Formulário de Contato.</a></li>
-      <li><a href="Cap5-at02.html">AT02 - Cadastro de Usuário.</a></li>
-      <li><a href="Cap5-at03.html">AT03 - Matrícula Acadêmica.</a></li>
-      <li><a href="Cap5-at04.html">AT04 - Inscrição em Evento.</a></li>
-      <li><a href="Cap5-at05.html">AT05 - Pesquisa Acadêmica.</a></li>
-    </ul>
+      < seção  id =" contato " class =" cartão " >
+        < h2 > Contato </ h2 >
+        <!-- TROQUE pelos seus links -->
+        < ul  class =" contato " >
+          < li > ✉️ < a  href =" mailto:lml7@aluno.ifal.edu.br " > lml7@aluno.ifal.edu.br </ a > </ li >
+          <li> 🐙 <a href="https://github.com/lml7-tech.github.io"> github.com/lml7-tech.github.io</a> </li>​​​​​​​​​​​​ 
+        </ul>​​
+      </ seção >
+    </aside>​​
 
-    <h3>Capítulo 7</h3>
+    <!-- ====== RODAPÉ — TROQUE o nome ====== -->
+    < footer  class =" rodape " > © 2026 Leoanda Marcia de LIma· feito com HTML + CSS Grid </ footer >
 
-    <ul>
-      <li>
-        <a href="Cap07/atv01.html">
-          Atividade - Refatoração de Seletores e Unidades CSS.
-        </a>
-      </li>
-    </ul>
+  </div>​​
+</body>​​
 
-  </main>
-
-  <footer>
-    <p>© 2026 - Leoanda Marcia de Lima</p>
-  </footer>
-
-</body>
-      
+</ html >
