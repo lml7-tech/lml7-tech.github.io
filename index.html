@@ -1,99 +1,109 @@
-<!DOCTYPE html >
-<!-- ===========================================================
+<!DOCTYPE html>
+<!-- ============================================================
      TEMPLATE — Página pessoal com CSS Grid
      Programação Web / Introdução às Tecnologias Web — IFAL
+
      COMO USAR:
      1) Copie ESTE index.html para o seu repositório (não mude a estrutura).
      2) Escolha UM dos 3 temas de CSS (tema-1-indigo.css, tema-2-escuro.css
-        ou tema-3-editorial.css) e salve-o no seu projeto como estilo.css
+        ou tema-3-editorial.css) e salve-o no seu projeto como  estilo.css
         (é o nome que este HTML carrega logo abaixo).
      3) Troque os textos marcados com "TROQUE" pelo seu conteúdo.
+
      IMPORTANTE: o LAYOUT é feito com CSS Grid e é o mesmo nos 3 temas.
      Você escolhe a APARÊNCIA (fonte, cores, bordas), não o layout.
      ============================================================ -->
-< html  lang =" pt-BR " >
+<html lang="pt-BR">
 
-< cabeçalho >
-  < meta  charset =" UTF-8 " >
-  < meta  name =" viewport " content =" width=device-width, initial-scale=1.0 " >
-  < title > Página Pessoal — Seu Nome </ title >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal — Seu Nome</title>
   <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
-  < link  rel =" stylesheet " href =" estilo.css " >
-</head>​​
+  <link rel="stylesheet" href="estilo.css">
+</head>
 
-< corpo >
-  < div  class =" pagina " >
+<body>
+  <div class="pagina">
 
     <!-- ====== CABEÇALHO — TROQUE pelo seu nome e sua frase ====== -->
-    < header  class =" cabecalho " >
-      < h1 > Leoanda Marcia de Lima </ h1 >
-      < p > Estudante de desenvolvimento de sistemas · IFAL </ p >
-      < nav >
-        < a  href =" #sobre " > Sobre </ a >
-        < a  href =" #projetos " > Projetos </ a >
-        < a  href =" #contato " > Contato </ a >
-      </ nav >
-    </ cabeçalho >
+    <header class="cabecalho">
+      <h1>Leoanda Marcia de Lima</h1>
+      <p>Estudante de Sistemas de Informação · IFAL</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
 
     <!-- ====== CONTEÚDO PRINCIPAL ====== -->
-    < classe principal  =" principal " >
-      < seção  id =" sobre " class =" cartão " >
-        <h2> sobre mim</h2>​​​
+    <main class="principal">
+      <section id="sobre" class="cartao">
+        <h2>Sobre mim</h2>
         <!-- TROQUE por uma breve apresentação sua -->
-        < p > Meu nome é Leoanda, tenho 15 anos e sou estudante de uma escola federal. 
-        Atualmente, faço o ensino médio integrado ao curso técnico de Desenvolvimento de sistemas. 
-        Apensar de ser uma área nova para mim e de ás vezes eu ter dificuldade, gosto de aprender coisas novas 
-        e fico muito feliz quando consigo fazer algo funcionar. 
-           </ p >
+        <p>Meu nome é Leoanda, tenho 15 anos e sou estudante de uma escola federal.
+           Atualmente, faço o ensino médio integrado ao curso de Desenvolvimento de Sistemas.</p>
+      </section>
 
-      </ seção >
-
-      < seção  id =" projetos " class =" cartão " >
-        < h2 > Projetos </ h2 >
-        <!-- Galeria com Grid: cada .projeto é um cartão; adicionar/remover à vontade -->
-        < div  class =" projetos " >
-          < artigo  class =" projeto " >
-            < h3 > Projeto 1 </ h3 >
-            < p > O que é e o que você fez. TROQUE por um projeto seu. </ p >
-          </ artigo >
-          < artigo  class =" projeto " >
-            < h3 > Projeto 2 </ h3 >
-            < p > Descrição curta do projeto. </ p >
-          </ artigo >
-          < artigo  class =" projeto " >
-            < h3 > Projeto 3 </ h3 >
-            < p > Descrição curta do projeto. </ p >
-          </ artigo >
-        </div>​​
-      </ seção >
-    </main>​​
+      <section id="projetos" class="cartao">
+        <h2>Projetos</h2>
+        <!-- Galeria com Grid: cada .projeto é um card; adicione/remova à vontade -->
+        <div class="projetos">
+          <article class="projeto">
+            <h3>praticas com css</h3>
+            <p> estilização</p>
+            <a href="Cap07/atv01.html">Atividade - Refatoração de Seletores e Unidades CSS.</a>
+           <a href="atividade-css01-sala">Atividade - Formulário com css.</a>
+      
+          </article>
+          <article class="projeto">
+            <h3>Capítulo 5</h3>
+            <p>atividades da diciplina:</p>
+            <a href="Cap5-at01.html">AT01 - Formulário de Contato.</a>
+            <a href="Cap5-at02.html">AT02 - Cadastro de Usuário.</a>
+            <a href="Cap5-at03.html">AT03 - Matrícula Acadêmica.</a>
+            <a href="Cap5-at04.html">AT04 - Inscrição em Evento.</a>
+            <a href="Cap5-at05.html">AT05 - Pesquisa Acadêmica.</a>
+          </article>
+          <article class="projeto">
+            <h3>capítulo 4</h3>
+            <p> atividades da diciplina.</p>
+            <a href="capitulo04-at1.html">Cap4. Atividade 1.</a>
+            <a href="capitulo04-at2.html">Cap4. Atividade 2.</a>
+            <a href="capitulo04-at3.html">Cap4. Atividade 3.</a>
+            <a href="capitulo04-at4.html">Cap4. Atividade 4.</a>
+          </article>
+        </div>
+      </section>
+    </main>
 
     <!-- ====== BARRA LATERAL ====== -->
-    < aside  class =" lateral " >
-      < section  class =" cartao " >
-        < h2 > Habilidades </ h2 >
+    <aside class="lateral">
+      <section class="cartao">
+        <h2>Habilidades</h2>
         <!-- TROQUE pelas suas habilidades -->
-        < ul  class =" habilidades " >
-          <li> HTML </li>​​​​
-          <li> CSS </li>​​​​
-          <li> informática básica</li>
-        </ul>​​
-      </ seção >
+        <ul class="habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>informática básica</li>
+        </ul>
+      </section>
 
-      < seção  id =" contato " class =" cartão " >
-        < h2 > Contato </ h2 >
+      <section id="contato" class="cartao">
+        <h2>Contato</h2>
         <!-- TROQUE pelos seus links -->
-        < ul  class =" contato " >
-          < li > ✉️ < a  href =" mailto:lml7@aluno.ifal.edu.br " > lml7@aluno.ifal.edu.br </ a > </ li >
-          <li> 🐙 <a href="https://github.com/lml7-tech.github.io"> github.com/lml7-tech.github.io</a> </li>​​​​​​​​​​​​ 
-        </ul>​​
-      </ seção >
-    </aside>​​
+        <ul class="contato">
+          <li>✉️ <a href="mailto:lml7@aluno.ifal.edu.br">lml7@aluno.ifal.edu.br</a></li>
+          <li>🐙 <a href="https://github.com/lml7-tech.github.io">github.com/lml7-tech.github.io</a></li>
+        </ul>
+      </section>
+    </aside>
 
     <!-- ====== RODAPÉ — TROQUE o nome ====== -->
-    < footer  class =" rodape " > © 2026 Leoanda Marcia de LIma· feito com HTML + CSS Grid </ footer >
+    <footer class="rodape">© 2026 Leoanda Marcia de Lima · feito com HTML + CSS Grid</footer>
 
-  </div>​​
-</body>​​
+  </div>
+</body>
 
-</ html >
+</html>
