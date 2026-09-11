@@ -1,107 +1,107 @@
 /* ============================================================
    TEMA 3 — EDITORIAL (claro, sério, com fonte serifada)
-   Para usar: salve este arquivo como estilo.css no seu projeto.
-   Você pode alterar CORES, FONTE e BORDAS aqui.
-   NÃO mexa na seção "LAYOUT (GRID)" — é o pedido de layout na atividade.
-   ============================================================= */
+   Para usar: salve este arquivo como  estilo.css  no seu projeto.
+   Você pode mudar CORES, FONTE e BORDAS aqui.
+   NÃO mexa na seção "LAYOUT (GRID)" — é o layout pedido na atividade.
+   ============================================================ */
 
 /* ---- Cores e fonte (mude à vontade) ---- */
-: raiz {
-  --cor :  #e7f14e ;
-  --cor-escura :  #e0c02e ;
-  --texto :  #2b2b2b ;
-  --suave :  #7a6f66 ;
-  --fundo :  #f1f082 ;
-  --superfície :  #ffffff ;
-  --borda :  #e3d9cc ;
-  --raio :  6 px ;
+:root {
+  --cor: #d32f2f;
+  --cor-escura: #8b0000;
+  --texto: #2b0a0a;
+  --suave: #f8b4b4;
+  --fundo: #fff5f5;
+  --superficie: #ffffff;
+  --borda: #e57373;
+  --raio: 6px;
 }
 
-corpo {
-  margem :  0 ;
-  família-da-fonte : Georgia ,  "Times New Roman" , serifada;
-  cor :  var ( --texto );
-  fundo :  var ( --fundo );
-  altura da linha :  1,65 ;
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--texto);
+  background: var(--fundo);
+  line-height: 1.65;
 }
 
 /* ============================================================
    LAYOUT (GRID) — NÃO MUDE
-   ============================================================= */
-* { box-sizing : border-box; }
+   ============================================================ */
+* { box-sizing: border-box; }
 
-. página {
-  exibição : grade;
-  grid-template-columns :  1 fr  300 px ;
-  grid-template-areas :
+.pagina {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-areas:
     "cabecalho cabecalho"
-    "lateral principal"
-    "rodape rodape" ;
-  espaçamento :  24 px ;
-  largura máxima :  1000 px ;
-  margem :  0 auto;
-  preenchimento :  24 px ;
+    "principal lateral"
+    "rodape    rodape";
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
 }
 
-. cabecalho { área da grade : cabecalho; }
-.principal { área-grade : principal; }
-. lateral    { área-da-grade : lateral; }
-. rodape     { área-grade : rodape; }
+.cabecalho { grid-area: cabecalho; }
+.principal { grid-area: principal; }
+.lateral   { grid-area: lateral; }
+.rodape    { grid-area: rodape; }
 
-. projetos {
-  exibição : grade;
-  grid-template-columns :  repeat (auto-fit ,  minmax ( 200 px ,  1 fr ));
-  espaçamento :  16 px ;
-  margem superior :  14 px ;
+.projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
 }
 
-@media ( max-width :  640 px ) {
-  . página {
-    grid-template-columns :  1 fr ;
-    grid-template-areas :
+@media (max-width: 640px) {
+  .pagina {
+    grid-template-columns: 1fr;
+    grid-template-areas:
       "cabecalho"
       "principal"
       "lateral"
-      "rodape" ;
+      "rodape";
   }
 }
 /* ===================== fim do LAYOUT ===================== */
 
 /* ---- Aparência (mude à vontade) ---- */
-. cabecalho {
-  plano de fundo :  var ( -superficie );
-  cor :  var ( --texto );
-  preenchimento :  32 px ;
-  borda :  var sólida de 1 px ( --borda );
-  border-top :  var sólido de 4 px ( --cor );
-  raio-da-borda :  var ( --raio );
+.cabecalho {
+  background: var(--superficie);
+  color: var(--texto);
+  padding: 32px;
+  border: 1px solid var(--borda);
+  border-top: 4px solid var(--cor);
+  border-radius: var(--raio);
 }
-. cabecalho  h1 { margem :  0 ; tamanho da fonte :  braçadeira ( 1,7 rem ,  4 vw ,  2,6 rem ); cor :  var ( -cor-escura ); }
-. cabecalho  p { margem :  6 px  0  0 ; cor :  var ( -suave ); estilo da fonte : itálico; }
-.cabecalho nav { margin-top : 16 px ; display : flex; gap : 20 px ; flex-wrap : wrap; }   
-.cabecalho nav  a  { color :  var ( --cor ); text-decoration : none; font-weight : bold; border -bottom :  2 px solid transparent; }
-. cabecalho  nav  a : hover { border-bottom-color :  var ( -cor ); }
+.cabecalho h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.6rem); color: var(--cor-escura); }
+.cabecalho p { margin: 6px 0 0; color: var(--suave); font-style: italic; }
+.cabecalho nav { margin-top: 16px; display: flex; gap: 20px; flex-wrap: wrap; }
+.cabecalho nav a { color: var(--cor); text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; }
+.cabecalho nav a:hover { border-bottom-color: var(--cor); }
 
-. cartao {
-  plano de fundo :  var ( -superficie );
-  borda :  var sólida de 1 px ( --borda );
-  raio-da-borda :  var ( --raio );
-  preenchimento :  22 px ;
+.cartao {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 22px;
 }
-. cartao  + . cartao { margem-topo :  24 px ; }
-h2 { cor :  var ( -cor-escura ); margem superior :  0 ; border-bottom :  var sólido de 1 px ( --borda ); preenchimento inferior : 6 px ; } 
+.cartao + .cartao { margin-top: 24px; }
+h2 { color: var(--cor-escura); margin-top: 0; border-bottom: 1px solid var(--borda); padding-bottom: 6px; }
 
-. projeto {
-  fundo :  var ( --fundo );
-  borda :  var sólida de 1 px ( --borda );
-  raio-da-borda :  var ( --raio );
-  preenchimento :  16 px ;
+.projeto {
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 16px;
 }
-. projeto  h3 { margem :  0  0  6 px ; cor :  var ( -cor ); }
+.projeto h3 { margin: 0 0 6px; color: var(--cor); }
 
-. habilidades { list-style : none; padding :  0 ; margin :  0 ; display : flex; flex-wrap : wrap; gap :  8 px ; }
-. habilidades  li { background : transparente; borda :  var sólida de 1 px ( --cor ); cor : var ( -cor-escura ); raio-da-borda : var ( --raio ); preenchimento : 4 px 12 px ; tamanho da fonte : 0,9 rem ; }     
-. contato { list-style : none; padding :  0 ; margin :  0 ; }
-. contato  li { margem :  10 px  0 ; }
-. contato  a { cor :  var ( --cor ); }
-. rodape { text-align : center; color :  var ( --suave ); padding :  8px ; font -size :  .9rem ; font-style : italic; }
+.habilidades { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.habilidades li { background: transparent; border: 1px solid var(--cor); color: var(--cor-escura); border-radius: var(--raio); padding: 4px 12px; font-size: .9rem; }
+.contato { list-style: none; padding: 0; margin: 0; }
+.contato li { margin: 10px 0; }
+.contato a { color: var(--cor); }
+.rodape { text-align: center; color: var(--suave); padding: 8px; font-size: .9rem; font-style: italic; }
